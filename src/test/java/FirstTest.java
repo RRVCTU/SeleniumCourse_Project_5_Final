@@ -18,7 +18,7 @@ public class FirstTest {
     @BeforeEach
     public void before() {
         System.getProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.manage().window().maximize();
     }
 
