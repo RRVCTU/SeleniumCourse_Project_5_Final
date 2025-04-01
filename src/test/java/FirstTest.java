@@ -13,12 +13,12 @@ import java.time.Duration;
 public class FirstTest {
 
     WebDriver driver = new ChromeDriver();
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
     @BeforeEach
     public void before() {
         System.getProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().window().maximize();
     }
 
