@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,18 +23,21 @@ public class MainAppPage extends BasePage {
     @FindBy(xpath = "//div[@class='loader-mask shown']")
     private WebElement loadingIcon;
 
+    @Step("Проверка загрузки главной страницы")
     public MainAppPage checkMainTitle() {
         Assert.assertEquals("Проверка главного тайтла страницы",
                 "Панель быстрого запуска", waitUtilElementToBeVisible(mainTitleText).getText());
         return this;
     }
 
+    @Step("Переход на окно командировки")
     public MainAppPage chooseBusinessTrips() {
         waitUtilElementToBeClickable(expansesButton).click();
         waitUtilElementToBeClickable(businessTripsButton).click();
         return this;
     }
 
+    @Step("Нажать на кнопку 'Создать командировку'")
     public BusinessTripsPage createBusinessTrip() {
         waitUtilElementToBeClickable(createBusinessTripsButton).click();
         return pageManager.getBusinessTripsPage();

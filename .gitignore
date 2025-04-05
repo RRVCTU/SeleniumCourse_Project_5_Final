@@ -1,3 +1,7 @@
+# BИсключение папки .allure из git
+.allure
+
+# Folding ignoring
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/

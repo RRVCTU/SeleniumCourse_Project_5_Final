@@ -1,11 +1,13 @@
 package tests;
 
 import basetestsclass.BaseTests;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 
-public class FirstTest extends BaseTests {
+public class CreateBusinessTripTest extends BaseTests {
 
     @Test
+    @DisplayName("Проверка создания командировки")
     public void startTest() {
         app.getLoginPage()
                 .userAuthorization()
