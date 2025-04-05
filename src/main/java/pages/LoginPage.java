@@ -2,7 +2,6 @@ package pages;
 
 import io.qameta.allure.Step;
 import managers.TestPropManager;
-import net.bytebuddy.build.ToStringPlugin;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
