@@ -1,15 +1,11 @@
 package managers;
 
-import pages.BusinessTripsPage;
-import pages.LoginPage;
-import pages.MainAppPage;
+import pages.MainPage;
 
 public class PageManager {
 
     private static PageManager pageManager;
-    private LoginPage loginPage;
-    private MainAppPage mainAppPage;
-    private BusinessTripsPage businessTripsPage;
+    private MainPage mainPage;
 
     private PageManager() {
     }
@@ -21,25 +17,10 @@ public class PageManager {
         return pageManager;
     }
 
-    public LoginPage getLoginPage() {
-        if (loginPage == null) {
-            loginPage = new LoginPage();
+    public MainPage getMainPage() {
+        if (mainPage == null) {
+            mainPage = new MainPage();
         }
-        return loginPage;
+        return mainPage;
     }
-
-    public MainAppPage getMainAppPage() {
-        if (mainAppPage == null) {
-            mainAppPage = new MainAppPage();
-        }
-        return mainAppPage;
-    }
-
-    public BusinessTripsPage getBusinessTripsPage() {
-        if (businessTripsPage == null) {
-            businessTripsPage = new BusinessTripsPage();
-        }
-        return businessTripsPage;
-    }
-
 }

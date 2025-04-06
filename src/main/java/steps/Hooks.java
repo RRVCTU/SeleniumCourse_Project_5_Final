@@ -20,6 +20,7 @@ public class Hooks {
         InitManager.quitFramework();
     }
 
+
     @After
     public void embedScreenshot(Scenario scenario) {
         if (scenario.isFailed()) {
